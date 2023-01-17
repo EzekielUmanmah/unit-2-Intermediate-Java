@@ -89,3 +89,15 @@ class Drink {
         System.out.println("All customers can order water!");
     }
 }
+
+class Soda extends Drink {
+    public void type() {
+        System.out.println("A bottle of soda.");
+    }
+}
+
+class Milk extends Drink {
+    public void type() {
+        System.out.println("A bottle of milk.");
+    }
+}
