@@ -1,6 +1,12 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ArrayList<Cupcake> cupcakeMenu = new ArrayList<Cupcake>();
+
+        Cupcake cupcake = new Cupcake();
+        RedVelvet redVelvet = new RedVelvet();
+        Chocolate chocolate = new Chocolate();
     }
 }
 
