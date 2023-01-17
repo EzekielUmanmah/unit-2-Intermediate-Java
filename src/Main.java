@@ -15,7 +15,7 @@ class Cupcake {
         this.price = price;
     }
 
-    public static void type(){
+    public void type(){
         System.out.println("A basic, generic cupcake, with vanilla frosting");
     }
 }
