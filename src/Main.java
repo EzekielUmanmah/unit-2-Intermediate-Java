@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Scanner;
 
 public class Main {
@@ -47,6 +48,36 @@ public class Main {
         Soda soda = new Soda();
         Milk milk = new Milk();
 
+        System.out.println("\nWe are creating the drink menu. We have three drinks on the menu but need help with pricing.");
+
+        System.out.println("\nWe offer water. Here's a description:");
+        water.type();
+        System.out.println("\nHow much would you like to charge for a bottle of water? (Input a numerical number taken to 2 decimal places)");
+        priceText = input.nextLine();
+        price = Double.parseDouble(priceText);
+        water.setPrice(price);
+
+        System.out.println("\nWe offer soda. Here's a description:");
+        soda.type();
+        System.out.println("\nHow much would you like to charge for a bottle of soda? (Input a numerical number taken to 2 decimal places)");
+        priceText = input.nextLine();
+        price = Double.parseDouble(priceText);
+        soda.setPrice(price);
+
+        System.out.println("\nWe offer milk. Here's a description:");
+        milk.type();
+        System.out.println("\nHow much would you like to charge for a bottle of milk? (Input a numerical number taken to 2 decimal places)");
+        priceText = input.nextLine();
+        price = Double.parseDouble(priceText);
+        milk.setPrice(price);
+
+        drinkMenu.add(water);
+        drinkMenu.add(soda);
+        drinkMenu.add(milk);
+
+        for(Drink drink: drinkMenu){
+            System.out.println(drink.getClass() + ": " + drink.getPrice());
+        }
     }
 }
 
