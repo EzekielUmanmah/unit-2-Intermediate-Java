@@ -42,6 +42,11 @@ public class Main {
             System.out.println(menu.getClass() + ": " + menu.getPrice());
         }
 
+        ArrayList<Drink> drinkMenu = new ArrayList<Drink>();
+        Drink water = new Drink();
+        Soda soda = new Soda();
+        Milk milk = new Milk();
+
     }
 }
 
