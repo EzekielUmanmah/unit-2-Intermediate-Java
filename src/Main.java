@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        ArrayList<Cupcake> cupcakeMenu = new ArrayList<Cupcake>();
+        ArrayList<Cupcake> cupcakeMenu = new ArrayList<>();
         Scanner input = new Scanner(System.in);
 
         Cupcake cupcake = new Cupcake();
@@ -40,10 +39,10 @@ public class Main {
         cupcakeMenu.add(chocolate);
 
         for(Cupcake menu: cupcakeMenu){
-            System.out.println(menu.getClass() + ": " + menu.getPrice());
+            System.out.println(menu.getClass().getSimpleName() + ": " + menu.getPrice());
         }
 
-        ArrayList<Drink> drinkMenu = new ArrayList<Drink>();
+        ArrayList<Drink> drinkMenu = new ArrayList<>();
         Drink water = new Drink();
         Soda soda = new Soda();
         Milk milk = new Milk();
@@ -75,8 +74,10 @@ public class Main {
         drinkMenu.add(soda);
         drinkMenu.add(milk);
 
+        Order order = new Order(cupcakeMenu, drinkMenu);
+
         for(Drink drink: drinkMenu){
-            System.out.println(drink.getClass() + ": " + drink.getPrice());
+            System.out.println(drink.getClass().getSimpleName() + ": " + drink.getPrice());
         }
     }
 }
