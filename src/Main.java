@@ -38,7 +38,7 @@ public class Main {
         cupcakeMenu.add(redVelvet);
         cupcakeMenu.add(chocolate);
 
-        for(Cupcake menu: cupcakeMenu){
+        for (Cupcake menu : cupcakeMenu) {
             System.out.println(menu.getClass().getSimpleName() + ": " + menu.getPrice());
         }
 
@@ -74,39 +74,36 @@ public class Main {
         drinkMenu.add(soda);
         drinkMenu.add(milk);
 
-        Order order = new Order(cupcakeMenu, drinkMenu);
+        new Order(cupcakeMenu, drinkMenu);
 
-        for(Drink drink: drinkMenu){
-            System.out.println(drink.getClass().getSimpleName() + ": " + drink.getPrice());
-        }
     }
 }
 
 class Cupcake {
     public double price;
 
-    public double getPrice(){
+    public double getPrice() {
         return this.price;
     }
 
-    public void setPrice(double price){
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public void type(){
+    public void type() {
         System.out.println("A basic, generic cupcake, with vanilla frosting");
     }
 
 }
 
 class RedVelvet extends Cupcake {
-    public void type(){
+    public void type() {
         System.out.println("A red velvet based cupcake, with cream cheese frosting.");
     }
 }
 
 class Chocolate extends Cupcake {
-    public void type(){
+    public void type() {
         System.out.println("A chocolate based cupcake, with chocolate frosting.");
     }
 }
