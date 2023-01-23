@@ -69,11 +69,16 @@ public class Order {
                 } else {
                     System.out.println("Sorry, we don’t seem to have that on the menu.");
 
-                    System.out.println("Would you like to continue ordering? (Y/N)");
-                    placeOrder = input.nextLine();
-                    if (placeOrder.toLowerCase().charAt(0) != 'y') {
-                        ordering = false;
-                    }
+//                    System.out.println("Would you like to continue ordering? (Y/N)");
+//                    placeOrder = input.nextLine();
+//                    if (placeOrder.toLowerCase().charAt(0) != 'y') {
+//                        ordering = false;
+//                    }
+                }
+                System.out.println("Would you like to continue ordering? (Y/N)");
+                placeOrder = input.nextLine();
+                if (placeOrder.toLowerCase().charAt(0) != 'y') {
+                    ordering = false;
                 }
             }
 
